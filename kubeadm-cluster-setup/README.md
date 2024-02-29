@@ -17,7 +17,7 @@ Whether you're starting with a single-node cluster or scaling up to a multi-node
 **Automated Network Configuration:**
 Say goodbye to networking headaches. The included scripts automate the setup of essential networking components, such as the Calico network plugin, ensuring smooth communication between pods and seamless cluster operation.
 
-##### How to Use:
+### How to Use:
 **Provision EC2 Instances:**
 Log in to your cloud provider account (e.g., AWS) and create the necessary EC2 instances. Follow the provided guidelines for resource requirements to ensure optimal cluster performance.
 
