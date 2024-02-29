@@ -3,7 +3,7 @@ https://devopscube.com/setup-kubernetes-cluster-kubeadm/
 
 This repository provides comprehensive scripts and instructions for effortlessly setting up a Kubernetes cluster using Kubeadm on various cloud providers such as Azure, AWS, or any virtual machines (VMs). Whether you're a beginner exploring Kubernetes or an experienced user looking for a streamlined setup process, this repository offers a reliable solution tailored to your needs.
 
-##### Key Features:
+### Key Features:
 
 **Cloud Provider Agnostic:**
 The provided scripts and guides are designed to work seamlessly across different cloud providers, ensuring flexibility and compatibility with your preferred infrastructure.
@@ -30,7 +30,7 @@ Obtain the join command from the master node and run it on each worker node to j
 **Verification and Validation:**
 Once the setup is complete, verify the status of the Kubernetes nodes using the kubectl get nodes command. This ensures that all nodes are successfully integrated into the cluster and ready to handle your containerized workloads.
 
-#### Step 1: Provision EC2 Instances on AWS
+### Step 1: Provision EC2 Instances on AWS
 Log in to your AWS account and create three EC2 instances. According to the Kubeadm documentation, the master node requires at least 2 CPUs and 2GB of RAM.
 
 #### Step 2: Connect to the Master Node
