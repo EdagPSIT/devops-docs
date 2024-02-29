@@ -24,7 +24,7 @@ Create a namespace for ArgoCD and install the ArgoCD chart:
 >In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster. Names of resources need to be unique within a namespace, but not across namespaces. Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services, etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc).
 ```
 kubectl create namespace argocd
-helm install my-release bitnami/argo-cd -n argocd
+helm install my-argocd-chart bitnami/argo-cd -n argocd
 ```
 All bitnami charts available can be found [here](https://github.com/bitnami/charts/tree/main/bitnami)
 
