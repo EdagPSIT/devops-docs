@@ -3,7 +3,7 @@
 Welcome to the guide on installing ArgoCD on a Kubernetes cluster using Bitnami Helm charts. ArgoCD is a powerful continuous delivery tool for Kubernetes, enabling automated deployment and management of applications. By following the steps outlined below, you'll have ArgoCD up and running in no time.
 
 #### Step-by-Step Installation Guide
-###### Step 1: Helm3 Installation
+##### Step 1: Helm3 Installation
 Helm is the package manager for Kubernetes, allowing you to easily manage applications and resources. Follow these commands to install Helm3 on your Linux server:
 Head over to helm intallation page at [here](https://helm.sh/docs/intro/install/)
 
