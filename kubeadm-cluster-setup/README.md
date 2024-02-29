@@ -4,7 +4,7 @@ https://devopscube.com/setup-kubernetes-cluster-kubeadm/
 
 
 #### step 1: run the master-node.sh script on master-node
-'./master-node.sh'
+'''./master-node.sh'''
 
 #### Step 2: Run following commands on master node
 'mkdir -p $HOME/.kube
