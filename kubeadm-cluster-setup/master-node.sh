@@ -64,6 +64,6 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # Initialize Kubernetes Cluster with Kubeadm (master node)
-sudo kubeadm init
+# sudo kubeadm init
 
 echo "master node setup configuration completed successfully."
