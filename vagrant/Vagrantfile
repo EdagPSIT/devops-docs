@@ -1,0 +1,42 @@
+
+# Define required variables
+BASE_BOX_IMAGE = "bento/ubuntu-20.04"
+MASTER_CPUS = 4
+MASTER_MEM = 3072
+WORKER_CPUS = 2
+WORKER_MEM = 2048
+WORKER_NODE_COUNT = 2
+
+
+# common configuaration
+Vagrant.configure("2") do |config|
+	# config.vm.provision "shell", path:"common.sh"
+
+	# Master node config
+	config.vm.define "master-node" do |master|
+		master.vm.box = BASE_BOX_IMAGE
+		master.vm.hostname = 'master-node'
+		master.vm.network "private_network", ip: "192.168.56.100"
+		master.vm.network "forwarded_port",guest:6443,host:6443
+		master.vm.provider "virtualbox" do |vb|
+			vb.name = "master-node"
+			vb.memory = MASTER_MEM
+			vb.cpus = MASTER_CPUS
+		end
+	end
+
+	# worker node configuration
+	(1..WORKER_NODE_COUNT).each do |i|
+		config.vm.define "worker-node-#{i}" do |worker|
+			worker.vm.box = BASE_BOX_IMAGE
+			worker.vm.hostname = "worker-node-#{i}"
+			#worker.vm.network "forwarded_port",guest:38412,host:38412
+			worker.vm.network "private_network",ip:"192.168.56.10#{i}"
+			worker.vm.provider "virtualbox" do |vb|
+				vb.name = "worker-node-#{i}"
+				vb.cpus = WORKER_CPUS
+				vb.memory = WORKER_MEM
+			end
+		end
+	end
+end
