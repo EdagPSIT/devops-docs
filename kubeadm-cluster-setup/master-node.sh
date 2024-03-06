@@ -64,6 +64,6 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # Initialize Kubernetes Cluster with Kubeadm (master node)
-# sudo kubeadm init
+sudo kubeadm init --apiserver-advertise-address 192.168.56.100 --pod-network-cidr 10.1.0.0/16
 
 echo "master node setup configuration completed successfully."
